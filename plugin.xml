@@ -124,6 +124,7 @@ xmlns:rim="http://www.blackberry.com/ns/widgets"
         <js-module src="src/windows/CaptureProxy.js" name="CaptureProxy">
             <runs />
         </js-module>
+        <asset src="src/windows/assets/cordova-plugin-media-capture.css" target="css/cordova-plugin-media-capture.css"/>
     </platform>
 
     <!-- browser -->
