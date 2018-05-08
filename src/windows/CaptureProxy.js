@@ -445,6 +445,9 @@ module.exports = {
                         localAppData.createFileAsync('captureAudio.m4a', generateUniqueName).then(function (storageFile) {
                             capturedFile = storageFile;
                             mediaCapture.startRecordToStorageFileAsync(m4aEncodingProfile, capturedFile).then(function () {
+                                if (progressUpdate) {
+                                    progressUpdate();
+                                }
                                 stopRecordTimeout = setTimeout(stopRecord, audioOptions.duration * 1000);
                             }, function () {
                                 // if we here, we're totally failed to record either mp3 or m4a
